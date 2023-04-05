@@ -362,7 +362,13 @@ a:hover{
 }
 .crypto-card{
     min-width: 250px;
+    transition: 0.5s opacity;
 }
+
+.crypto-card:hover{
+    opacity: 0.7;
+}
+
 .crypto-card .crypto-image{
     width:35px;
 }
