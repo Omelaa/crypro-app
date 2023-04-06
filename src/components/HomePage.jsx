@@ -59,7 +59,7 @@ const HomePage = () => {
                     </Link>
                 </Typography.Title>
             </div>
-            <News simplified/>
+            <News simplified={true}/>
         </>
     );
 };

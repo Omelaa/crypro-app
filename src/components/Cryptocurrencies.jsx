@@ -1,8 +1,9 @@
-import {useGetCryptosQuery} from "../services/cryptoApi";
+import millify from "millify";
+import {Link} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {Card, Col, Input, Row} from "antd";
-import {Link} from "react-router-dom";
-import millify from "millify";
+
+import {useGetCryptosQuery} from "../services/cryptoApi";
 
 const Cryptocurrencies = ({simplified}) => {
     const count = simplified ? 10 : 100;
@@ -31,7 +32,7 @@ const Cryptocurrencies = ({simplified}) => {
                     cryptos?.map(currency => (
                             <Col xs={24} sm={12} lg={6} className={"crypto-card"} key={currency.id}>
                                 <Link to={`/crypto/${currency}`}>
-                                    <Card title={`${currency.rank}. ${currency.name}`}
+                                    <Card hoverable title={`${currency.rank}. ${currency.name}`}
                                           extra={<img className={"crypto-image"} src={currency.iconUrl} alt={'crypto'}/>}
                                     >
                                         <p>
@@ -44,7 +45,6 @@ const Cryptocurrencies = ({simplified}) => {
                                             Daily Change: {millify(currency.change)}%
                                         </p>
                                     </Card>
-
                                 </Link>
                             </Col>
                         )
