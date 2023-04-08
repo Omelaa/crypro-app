@@ -1,10 +1,10 @@
+import {Link} from "react-router-dom";
 import {Space, Typography} from "antd";
 import {Route, Routes} from "react-router";
 
-import {Cryptocurrencies, CryptoDetails, Exchanges, HomePage, Navbar, News} from "./components";
-
 import "./App.css";
-import {Link} from "react-router-dom";
+
+import {Cryptocurrencies, CryptoDetails, Exchanges, HomePage, Navbar, News} from "./components";
 
 function App() {
 
