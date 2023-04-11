@@ -4,3 +4,4 @@ export * from './Cryptocurrencies';
 export * from './CryptoDetails';
 export * from './Exchanges';
 export * from './News';
+export * from './LineChart';
